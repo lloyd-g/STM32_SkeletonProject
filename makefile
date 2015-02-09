@@ -145,9 +145,9 @@ flash: flash-elf
 
 .PHONY: flash-elf
 flash-elf: all
-	@cp $(MAIN_OUT) jtag/flash.elf
-	@cd jtag && openocd -f flash-elf.cfg
-	@rm jtag/flash.elf
+	@cp $(MAIN_OUT) rlink/flash.elf
+	@cd rlink && openocd -f flash-elf.cfg
+	@rm rlink/flash.elf
 
 .PHONY: flash-bin
 flash-bin: all
